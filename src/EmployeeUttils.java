@@ -37,9 +37,9 @@ public class EmployeeUttils {
 
             Connection connection = JDBCConeection.createConnection();
             Statement statement = connection.createStatement();
-            ResultSet ThirdQuery = statement.executeQuery("select * from task3.employee where reportTo='manager'");
+            ResultSet ThirdQuery = statement.executeQuery("select id, CONCAT(firstName,' ',lastName) AS name, reportTo, email, designation FROM task3.employee;");
             while (ThirdQuery.next()) {
-                System.out.println(ThirdQuery.getInt(1) + " " +(ThirdQuery.getString(2) +ThirdQuery.getString(3))+  "   "  + ThirdQuery.getString(4) +"  " + ThirdQuery.getString(5) +"   " +ThirdQuery.getString(6)+"   " +ThirdQuery.getString(7)+"   " +ThirdQuery.getString(8));
+                System.out.println(ThirdQuery.getInt(1) + " " + ThirdQuery.getString(2)+ThirdQuery.getString(3)  +  "   "  + ThirdQuery.getString(4) +"  " + ThirdQuery.getString(5) );
                 System.out.println();
             }
         }catch (Exception e){
