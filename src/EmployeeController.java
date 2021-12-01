@@ -75,14 +75,13 @@ public class EmployeeController {
                             statement.close();
                         break;
                     case 14:
-                        System.out.println("table inserted");
+                        System.out.println("user insert the data here");
                         InsertDataInTable.InsertData();
+                        System.out.println("table inserted");
 //
                 }
 //
                 }while (choicequery != 13) ;
-//            statement.close();
-//            connection.close();
 
             }catch(Exception e){
                 e.printStackTrace();
