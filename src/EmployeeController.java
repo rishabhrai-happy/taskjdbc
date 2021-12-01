@@ -78,9 +78,14 @@ public class EmployeeController {
                         System.out.println("user insert the data here");
                         InsertDataInTable.InsertData();
                         System.out.println("table inserted");
-//
+                        break;
+                    case 15:
+                        System.out.println("insert the data in department table");
+                        InsertDataInTable.InsertDataInDepartment();
+                        System.out.println("table inserted in department");
+
                 }
-//
+
                 }while (choicequery != 13) ;
 
             }catch(Exception e){

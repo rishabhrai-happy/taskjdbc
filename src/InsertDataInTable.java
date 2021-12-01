@@ -46,4 +46,29 @@ public class InsertDataInTable {
         }
         return result;
     }
+    public static boolean InsertDataInDepartment() {
+        Scanner sc=new Scanner(System.in);
+
+        boolean result=false;
+        try {
+
+            Connection connection = JDBCConeection.createConnection();
+            String query="INSERT INTO task3.department VALUES( ?, ?, ?)";
+            PreparedStatement statement = connection.prepareStatement(query);
+            System.out.println("id of employee");
+            statement.setInt(1,sc.nextInt());
+            System.out.println(" Name of department");
+            statement.setString(2,sc.next());
+            System.out.println(" name of city");
+            statement.setString(3,sc.next());
+            statement.addBatch();
+            statement.executeBatch();
+            result=true;
+
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return result;
+    }
 }
