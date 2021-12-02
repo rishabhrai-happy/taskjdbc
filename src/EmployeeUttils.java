@@ -4,7 +4,7 @@ import java.sql.Statement;
 
 public class EmployeeUttils {
 
-    public static void EmployeeWithNameDegignation(){
+    public  void EmployeeWithNameDegignation(){
         try {
 
             Connection connection = JDBCConeection.createConnection();
@@ -18,7 +18,7 @@ public class EmployeeUttils {
             e.printStackTrace();
         }
     }
-    public static void EmployeeWithSeAndQe(){
+    public void EmployeeWithSeAndQe(){
         try {
 
             Connection connection = JDBCConeection.createConnection();
@@ -32,7 +32,7 @@ public class EmployeeUttils {
             e.printStackTrace();
         }
     }
-    public static void EmployeeWithReportingManager(){
+    public  void EmployeeWithReportingManager(){
         try {
 
             Connection connection = JDBCConeection.createConnection();
@@ -46,7 +46,7 @@ public class EmployeeUttils {
             e.printStackTrace();
         }
     }
-    public static void EmployeeStartWithA(){
+    public void EmployeeStartWithA(){
         try {
 
             Connection connection = JDBCConeection.createConnection();
@@ -60,7 +60,7 @@ public class EmployeeUttils {
             e.printStackTrace();
         }
     }
-    public static void EmployeeWithTop5Salary(){
+    public  void EmployeeWithTop5Salary(){
         try {
 
             Connection connection = JDBCConeection.createConnection();
@@ -74,7 +74,7 @@ public class EmployeeUttils {
             e.printStackTrace();
         }
     }
-    public static void Employeey2ndHighestSalary(){
+    public void Employeey2ndHighestSalary(){
         try {
 
             Connection connection = JDBCConeection.createConnection();
@@ -88,7 +88,7 @@ public class EmployeeUttils {
             e.printStackTrace();
         }
     }
-    public static void EmployeeyLessSalaryThan2ndHighst(){
+    public  void EmployeeyLessSalaryThan2ndHighst(){
         try {
 
             Connection connection = JDBCConeection.createConnection();
@@ -102,7 +102,7 @@ public class EmployeeUttils {
             e.printStackTrace();
         }
     }
-    public static void EmployeeyWithDepartmentName(){
+    public void EmployeeyWithDepartmentName(){
         try {
 
             Connection connection = JDBCConeection.createConnection();
@@ -116,7 +116,7 @@ public class EmployeeUttils {
             e.printStackTrace();
         }
     }
-    public static void EmployeeyWithCity(){
+    public  void EmployeeyWithCity(){
         try {
 
             Connection connection = JDBCConeection.createConnection();
@@ -130,7 +130,7 @@ public class EmployeeUttils {
             e.printStackTrace();
         }
     }
-    public static void TotalSalary(){
+    public  void TotalSalary(){
         try {
 
             Connection connection = JDBCConeection.createConnection();
@@ -144,7 +144,7 @@ public class EmployeeUttils {
             e.printStackTrace();
         }
     }
-    public static void AvreageSalary(){
+    public  void AvreageSalary(){
         try {
 
             Connection connection = JDBCConeection.createConnection();
@@ -158,7 +158,7 @@ public class EmployeeUttils {
             e.printStackTrace();
         }
     }
-    public static void TotalSalaryWithDepartment(){
+    public  void TotalSalaryWithDepartment(){
         try {
 
             Connection connection = JDBCConeection.createConnection();

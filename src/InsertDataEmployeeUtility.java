@@ -3,8 +3,8 @@ import java.sql.PreparedStatement;
 import java.sql.Statement;
 import java.util.Scanner;
 
-public class InsertDataInTable {
-    public static boolean InsertData() {
+public class InsertDataEmployeeUtility {
+    public  void InsertData() {
         Scanner sc=new Scanner(System.in);
         int id;
         String FirstName;
@@ -14,7 +14,6 @@ public class InsertDataInTable {
         int reportTo;
         String designation;
         String date;
-        boolean result=false;
        try {
 
             Connection connection = JDBCConeection.createConnection();
@@ -38,37 +37,11 @@ public class InsertDataInTable {
            statement.setString(8,sc.next());
            statement.addBatch();
            statement.executeBatch();
-           result=true;
 
 
         }catch (Exception e){
             e.printStackTrace();
         }
-        return result;
     }
-    public static boolean InsertDataInDepartment() {
-        Scanner sc=new Scanner(System.in);
 
-        boolean result=false;
-        try {
-
-            Connection connection = JDBCConeection.createConnection();
-            String query="INSERT INTO task3.department VALUES( ?, ?, ?)";
-            PreparedStatement statement = connection.prepareStatement(query);
-            System.out.println("id of employee");
-            statement.setInt(1,sc.nextInt());
-            System.out.println(" Name of department");
-            statement.setString(2,sc.next());
-            System.out.println(" name of city");
-            statement.setString(3,sc.next());
-            statement.addBatch();
-            statement.executeBatch();
-            result=true;
-
-
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-        return result;
-    }
 }

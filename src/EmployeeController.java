@@ -1,7 +1,5 @@
 
 import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.Scanner;
 
@@ -14,6 +12,9 @@ public class EmployeeController {
             Connection connection = JDBCConeection.createConnection();
 
             Statement statement = connection.createStatement();
+            EmployeeUttils ObjectForQuery=new EmployeeUttils();
+            InsertDataEmployeeUtility employeedata=new InsertDataEmployeeUtility();
+            DepartmentUtility departmentdata=new DepartmentUtility();
 
             do {
 
@@ -23,51 +24,51 @@ public class EmployeeController {
                 switch (choicequery) {
                     case 1:
                         System.out.println("1.All the Employee with following details - id,name(firstName+lastName),email,designation");
-                        EmployeeUttils.EmployeeWithNameDegignation();
+                        ObjectForQuery.EmployeeWithNameDegignation();
                         break;
                     case 2:
                         System.out.println("2.All the Employee with designation as Software engineer and QA engineer");
-                        EmployeeUttils.EmployeeWithSeAndQe();
+                        ObjectForQuery.EmployeeWithSeAndQe();
                         break;
                     case 3:
                         System.out.println("5.Top 5 Employee with highest Salary");
-                        EmployeeUttils.EmployeeWithReportingManager();
+                        ObjectForQuery.EmployeeWithReportingManager();
                         break;
                     case 4:
                         System.out.println("4.All the Employee whose name start with Alphabet 'A'");
-                        EmployeeUttils.EmployeeStartWithA();
+                        ObjectForQuery.EmployeeStartWithA();
                         break;
                     case 5:
                         System.out.println("5.Top 5 Employee with highest Salary");
-                        EmployeeUttils.EmployeeWithTop5Salary();
+                        ObjectForQuery.EmployeeWithTop5Salary();
                         break;
                     case 6:
                         System.out.println("6. employee with 2nd highest salary in the company");
-                        EmployeeUttils.Employeey2ndHighestSalary();
+                        ObjectForQuery.Employeey2ndHighestSalary();
                         break;
                     case 7:
                         System.out.println("7.All the employee whose salary is less than employee with 2nd highest salary");
-                        EmployeeUttils.EmployeeyLessSalaryThan2ndHighst();
+                        ObjectForQuery.EmployeeyLessSalaryThan2ndHighst();
                         break;
                     case 8:
                         System.out.println("8.All the Employee with their department name");
-                        EmployeeUttils.EmployeeyWithDepartmentName();
+                        ObjectForQuery.EmployeeyWithDepartmentName();
                         break;
                     case 9:
                         System.out.println("9.List of the employee who were working on Y city");
-                        EmployeeUttils.EmployeeyWithCity();
+                        ObjectForQuery.EmployeeyWithCity();
                         break;
                     case 10:
                         System.out.println("10.Total Salary given to Employee in the company");
-                        EmployeeUttils.TotalSalary();
+                        ObjectForQuery.TotalSalary();
                         break;
                     case 11:
                         System.out.println("11.Average Salary given to Employee in city Y");
-                        EmployeeUttils.AvreageSalary();
+                        ObjectForQuery.AvreageSalary();
                         break;
                     case 12:
                         System.out.println("12. Total Salary given to the Employee department wise");
-                        EmployeeUttils.TotalSalaryWithDepartment();
+                        ObjectForQuery.TotalSalaryWithDepartment();
                         break;
 
                         case 13:
@@ -76,12 +77,12 @@ public class EmployeeController {
                         break;
                     case 14:
                         System.out.println("user insert the data here");
-                        InsertDataInTable.InsertData();
+                        employeedata.InsertData();
                         System.out.println("table inserted");
                         break;
                     case 15:
                         System.out.println("insert the data in department table");
-                        InsertDataInTable.InsertDataInDepartment();
+                        departmentdata.InsertDataInDepartment();
                         System.out.println("table inserted in department");
 
                 }
