@@ -15,6 +15,7 @@ public class EmployeeController {
             EmployeeUttils ObjectForQuery=new EmployeeUttils();
             InsertDataEmployeeUtility employeedata=new InsertDataEmployeeUtility();
             DepartmentUtility departmentdata=new DepartmentUtility();
+            CreateTable table=new CreateTable();
 
             do {
 
@@ -84,6 +85,11 @@ public class EmployeeController {
                         System.out.println("insert the data in department table");
                         departmentdata.InsertDataInDepartment();
                         System.out.println("table inserted in department");
+                        break;
+                    case 16:
+                        table.createTable();
+                        System.out.println("create table");
+                        break;
 
                 }
 
